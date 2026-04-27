@@ -1,0 +1,33 @@
+{
+    "modules-right": ["network", "memory", "battery", "sway/language", "tray"],
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+   
+    "memory": {
+        "interval": 10,
+        "format": " {used:0.1f}GiB - {percentage}%",
+        "tooltip-format": "Использовано: {used} GiB\nВсего: {total} GiB\nДоступно: {avail} GiB"
+    },
+    "sway/language": {
+        "format": "  {}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%H:%M   📅 %d.%m.%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "⚠ Disconnected"
+    }
+}
+
