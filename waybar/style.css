@@ -56,3 +56,17 @@ window#waybar {
     background-color: #585b70; /* Выделим язык чуть другим цветом */
     color: #ffffff;
 }
+
+/* Настройка самого тултипа (фона и границ) */
+tooltip {
+    background: #313244; /* Темно-серый, но не черный */
+    border: 2px solid #89b4fa; /* Голубая рамка под стиль Wofi */
+    border-radius: 10px;
+}
+
+tooltip label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 18px; /* Увеличиваем размер текста */
+    color: #cdd6f4; /* Светлый текст */
+    padding: 15px;
+}
