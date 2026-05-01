@@ -45,4 +45,15 @@ for line in "${EXPORTS[@]}"; do
     fi
 done
 
+# Список нужных программ
+apps=("pasystray" "pavucontrol" "font-awesome-fonts")
+
+echo "Checking dependecies..."
+for app in "${apps[@]}"; do
+    if ! rpm -q $app &>/dev/null; then
+        echo "Устанавливаю $app..."
+        sudo dnf install -y $app
+    fi
+done
+
 echo "--- All right! Re run terminal or enter: source ~/.bashrc ---"
