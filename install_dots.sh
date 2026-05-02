@@ -47,6 +47,9 @@ done
 
 export GDK_BACKEND=wayland,x11
 export XDG_CURRENT_DESKTOP=sway
+export GTK_THEME=dark
 
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 echo "--- All right! Re run terminal or enter: source ~/.bashrc ---"
