@@ -70,3 +70,19 @@ tooltip label {
     color: #cdd6f4; /* Светлый текст */
     padding: 15px;
 }
+
+#tray {
+    background-color: #1e1e2e; /* Цвет твоего Waybar */
+    border-radius: 10px;
+    margin: 4px 8px;
+    padding: 0 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #f38ba8;
+}

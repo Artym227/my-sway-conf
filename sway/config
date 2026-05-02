@@ -22,8 +22,8 @@ set $menu wmenu-run
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
-for_window [class=".*"] border pixel 0
-for_window [app_id=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
+for_window [app_id=".*"] border pixel 2
 default_border none
 default_floating_border none
 gaps inner 0
@@ -34,8 +34,7 @@ exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 smart_gaps on
-exec pasystray --notify=all --mpris=enable --command-pavucontrol=pavucontrol
-
+exec_always sh -c "pkill pasystray; sleep 0.5; GTK_THEME=Adwaita:dark pasystray --notify=all"
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #

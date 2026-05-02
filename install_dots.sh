@@ -45,7 +45,8 @@ for line in "${EXPORTS[@]}"; do
     fi
 done
 
-# Список нужных программ
-apps=("pasystray" "pavucontrol" "font-awesome-fonts")
+export GDK_BACKEND=wayland,x11
+export XDG_CURRENT_DESKTOP=sway
+
 
 echo "--- All right! Re run terminal or enter: source ~/.bashrc ---"
