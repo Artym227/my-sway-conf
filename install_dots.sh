@@ -10,6 +10,8 @@ dots=("sway" "waybar" "wofi" "gtk-3.0" "gtk-4.0")
 
 echo "--- Starting config installation ---"
 
+cp -r  wallpaper.png "$HOME/Pictures/Wallpapers/"
+
 # 1. Бэкап старых конфигов
 echo "1. Creating backups in $BACKUP_DIR..."
 mkdir -p "$BACKUP_DIR"
