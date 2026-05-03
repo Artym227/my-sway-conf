@@ -52,4 +52,6 @@ export GTK_THEME=dark
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
+mkdir -p ~/Pictures/Screenshots
+
 echo "--- All right! Re run terminal or enter: source ~/.bashrc ---"
